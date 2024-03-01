@@ -6,14 +6,14 @@ import { CiTrophy } from "react-icons/ci";
 import { IoCheckmarkDoneCircleOutline } from 'react-icons/io5';
 export const Cards = () => {
     return (
-        <div className='w-full overflow-hidden'>
+        <div className='w-full'>
             {
                 ProductsData.map((item, index) => {
                     return (
                         <div key={index} className='h-full w-full   border rounded-lg  flex sm:flex-row flex-col sm:text-sm text-xs justify-evenly items-center pb-2 my-8 relative'>
                             {
                                 item.tag && (
-                                    <div className='flex bg-[#FF7724] text-white items-center gap-2 p-2 border rounded-lg absolute -left-2 -top-2 '>
+                                    <div className='flex bg-[#FF7724] text-white items-center gap-2 p-1 border rounded-lg absolute -left-2 -top-2 '>
                                         <span className='text-xl '><CiTrophy /></span>
                                         <span className=' '>{item.tag}</span>
                                     </div>
@@ -54,13 +54,13 @@ export const Cards = () => {
                                     <span ><FaChevronDown /></span>
                                 </div>
                             </div>
-                            <div className='flex justify-evenly items-center flex-col w-[12rem] '>
-                                <div className='flex flex-col justify-center items-center bg-[#F3F9FF] p-2  mb-2 sm:mb-36 gap-1'>
+                            <div className='flex justify-evenly items-center flex-row sm:flex-col w-[12rem] gap-4 mt-4 sm:mt-0 '>
+                                <div className='flex flex-col justify-center items-center bg-[#F3F9FF] p-2 mb-2 sm:mb-36 gap-1'>
                                     <span className='text-2xl font-semibold'>{item.rating}</span>
                                     <span>{item.ratingName}</span>
                                     <span className='text-xs' > <Rating name="read-only" value={item.value} readOnly /></span>
                                 </div>
-                                <div className='mt-6'>
+                                <div className='mt-0 sm:mt-6'>
                                     <button className='p-2 bg-[#1B88F4] hover:bg-[#79a3cd] w-40 border rounded-lg text-white'>View</button>
                                 </div>
                             </div>
